@@ -1,0 +1,5 @@
+====================
+sinopac.theme
+====================
+
+User documentation

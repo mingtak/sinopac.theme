@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="sinopac.theme">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="sinopac.theme.interfaces.ISinopacThemeLayer"
+      />
+
+  <!-- Publish static files -->
+  <browser:resourceDirectory
+      name="sinopac.theme"
+      directory="static"
+      />
+
+</configure>
