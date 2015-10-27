@@ -3,10 +3,10 @@
    BASIC
    ========================================================================== */
 html, body { margin:0px; padding:0px; height:100%; }
-body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:14px; }
+body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:14px; line-height: 120%; }
 a{ text-decoration: none;}
 b{ font-weight:normal;}
-p{ line-height:2em;}
+p{ line-height:2em; margin:0; padding:0;}
 h1,h2,h3,h4,h5,h6{ font-weight:400;}
 h1{ font-size:40px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; }
 h2{ font-size:26px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 180%; }
@@ -19,6 +19,13 @@ table,th,td { margin:0; padding:0; border:none; outline:none; border-collapse:co
 body {	
 	background:url(../images/bg.jpg);
 	background-color:#e8e8e8;
+}
+/*----------------- Font --------------------*/
+.word-b-red {
+	font-size:20px;
+	color:#e62310;
+	font-weight:bold;
+	line-height:120%;
 }
 /*----------------- link --------------------*/
 .white-blink:visited{
@@ -55,6 +62,42 @@ body {
 	color:#F30;
 	text-decoration:underline;
 }
+.li-white-link:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFF;
+	text-decoration:underline;
+}
+.li-white-link:link{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#FFF;
+	text-decoration:underline;
+}
+.li-white-link:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#F30;
+	text-decoration:none;
+}
+.blue-link:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0066cc;
+	text-decoration:underline;
+}
+.blue-link:link{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0066cc;
+	text-decoration:underline;
+}
+.blue-link:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#F30;
+	text-decoration:none;
+}
 /*----------------- 最外層包裝 --------------------*/
 #wrapper {
 	width: 1000px;
@@ -71,19 +114,56 @@ body {
 /*----------------- content --------------------*/
 #logo{
 	width:100%;
+	height:89px;
+	background:url(../images/logo-bg.gif);
 	float:left;
 }
-#logo img{
-	width:100%;
+#logo-bb{
+	width::380px;
+	float:right;
+	margin-right:12px;
+	margin-top:36px;
+}
+#w-ss{
+	width:143px;
+	float:left;
+	margin-top:8px;
+}
+#share{
+	width:167px;
+	height:25px;
+	float:right;
+	background:url(../images/share.jpg);
+}
+#share ul {
+	padding:0;
+	margin-left:89px;
+	margin-top:5px;
+	list-style:none;
+}
+#share ul li a {
+	list-style:none;
+	display:block;	
+	float:left;
+	width:16px;
+	height:16px;
+	margin-right:3px;
+	text-indent:-9999px;
 }
 #content{
 	width:100%;
-	padding-bottom:30px;
 	float:left;
 	background:url(../images/content-bg.jpg);
 	background-color:#FFF;
 	background-position:top center;
 	background-repeat:no-repeat;
+}
+#c-left{
+	width:50%;
+	clear:both;
+	float:left;
+	margin-left:31px;
+	margin-top:47px;
 }
 /*MENU_手機板選單*/
 #m_top_menu { display:none; }
@@ -92,7 +172,7 @@ body {
 	width:338px;
 	float:right;
 	margin-right:50px;
-	margin-top:15px;
+	margin-top:25px;
 }
 #menu ul {
 	padding:0;
@@ -108,7 +188,7 @@ body {
 	width:429px;
 	float:right;
 	margin-right:50px;
-	margin-top:15px;
+	margin-top:25px;
 }
 #menu-2 ul {
 	padding:0;
@@ -121,28 +201,37 @@ body {
 	float:left;
 }
 #words{
-	width:516px;
+	width:94%;
 	clear:both;
 	float:left;
-	margin-left:58px;
-	margin-top:63px;
-	margin-bottom:74px;
+	margin-bottom:31px;
+}
+#words img{
+	width:100%;
 }
 #words-m{
 	display:none;
 }
 #words-in{
-	width:516px;
-	clear:both;
-	float:left;
-	margin-left:58px;
-	margin-top:63px;
-	margin-bottom:74px;
+	width:75%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:15%;
+	margin-bottom:10%;
 	text-align:center;
 }
 #btn01{
-	width:336px;
-	margin:0 auto;
+	width:67%;
+	clear:both;
+	float:left;
+}
+#phone{
+	width:42%;
+	margin-top:47px;
+	float:left;
+}
+#phone img{
+	width:100%;
 }
 /*----------------- notice --------------------*/
 #notice {
@@ -178,19 +267,27 @@ body {
 	width:100%;
 	height:auto;
 	float:left;
-	background:#e62310;
+	background:#254a91;
 	text-align:center;
 	color:#FFF;
 	padding:1.2% 0% 1% 0%;
+	font-size:12px;
 }
-
+#qrcode {
+	display:none;
+	position:absolute;
+	width:96px;
+	z-index:2;
+	left: 62px;
+	top: 494px;
+}
 
 /*平板*/
 @media only screen and (max-width:800px) {
 
 h2{ font-size:20px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 240%; }
 h3{ font-size:16px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 145%; font-weight:bold; }
-body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:13px; line-height: 160%; }
+body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:13px; line-height: 120%; }
 
 /*----------------- 最外層包裝 --------------------*/
 #wrapper {
@@ -201,12 +298,18 @@ body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","
 /*----------------- content --------------------*/
 #content{
 	width:100%;
-	padding-bottom:30px;
 	float:left;
-	background:url(../images/content-bg2.jpg);
+	background:url(../images/content-bg.jpg);
 	background-color:#FFF;
 	background-position:top center;
 	background-repeat:no-repeat;
+}
+#c-left{
+	width:55%;
+	clear:both;
+	float:left;
+	margin-left:31px;
+	margin-top:47px;
 }
 #menu {
 	width:338px;
@@ -218,18 +321,7 @@ body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","
 	width:429px;
 	float:right;
 	margin-right:5%;
-	margin-top:15px;
-}
-#words{
-	width:60%;
-	clear:both;
-	float:left;
-	margin-left:5%;
-	margin-top:5%;
-	margin-bottom:10%;
-}
-#words img{
-	width:100%;
+	margin-top:25px;
 }
 #words-m{
 	display:none;
@@ -241,12 +333,10 @@ body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","
 	margin-top:15px;
 	text-align:center;
 }
-#btn01{
-	width:40%;
-	margin:0 auto;
-}
-#btn01 img{
-	width:100%;
+#phone{
+	width:38.5%;
+	margin-top:47px;
+	float:left;
 }
 /*----------------- notice --------------------*/
 #notice {
@@ -285,14 +375,46 @@ body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","
 
 h2{ font-size:20px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 240%; }
 h3{ font-size:16px; font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; line-height: 145%; font-weight:bold; }
-body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:13px; line-height: 160%; }
+body, th, td, input { font-family:"Hiragino Kaku Gothic Pro","微軟正黑體","Microsoft Jhenghei",Helvetica,Arial,sans-serif; font-size:13px; line-height: 120%; }
 
 /*----------------- content --------------------*/
+#logo-bb{
+	width::180px;
+	float:left;
+	margin-left:15px;
+	margin-top:15px;
+}
+#w-ss{
+	width:143px;
+	float:left;
+	margin-top:8px;
+}
+#share{
+	width:167px;
+	height:25px;
+	clear:both;
+	float:left;
+	background:url(../images/share.jpg);
+}
+#share ul {
+	padding:0;
+	margin-left:89px;
+	margin-top:5px;
+	list-style:none;
+}
+#share ul li a {
+	list-style:none;
+	display:block;	
+	float:left;
+	width:16px;
+	height:16px;
+	margin-right:3px;
+	text-indent:-9999px;
+}
 #content{
 	width:100%;
-	padding-bottom:30px;
 	float:left;
-	background:url(../images/content-bg3.jpg);
+	background:url(../images/content-bg.jpg);
 	background-color:#FFF;
 	background-position:top center;
 	background-repeat:no-repeat;
@@ -315,6 +437,13 @@ border-radius:20px;
 }
 #m_top_menu:hover {
 	background:#000 url(../images/m_topmenu_bg.png) no-repeat;
+}
+#c-left{
+	width:90%;
+	clear:both;
+	float:left;
+	margin-left:31px;
+	margin-top:5%;
 }
 #top_menu {
 	display:none;
@@ -350,7 +479,10 @@ border-radius:20px;
 	display:none;
 }
 #words{
-	display:none;
+	width:100%;
+	clear:both;
+	float:left;
+	margin-bottom:31px;
 }
 #words-m{
 	display:block;
@@ -361,24 +493,22 @@ border-radius:20px;
 	margin-top:5%;
 	margin-bottom:10%;
 }
-#words-in{
-	display:block;
-	width:90%;
-	clear:both;
-	float:left;
-	margin-left:5%;
-	margin-top:5%;
-	margin-bottom:10%;
-	text-align:center;
-}
 #words-m img{
 	width:100%;
 }
 #btn01{
-	width:50%;
-	margin-left:5%;
+	width:80%;
+	clear:both;
+	float:left;
+	margin-left:8%;
 }
 #btn01 img{
 	width:100%;
+}
+#phone{
+	width:80%;
+	margin-top:20px;
+	float:left;
+	margin-left:15%;
 }
 	}
