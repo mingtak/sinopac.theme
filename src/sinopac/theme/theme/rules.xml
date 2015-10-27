@@ -118,6 +118,13 @@
     <replace
       css:content="#content-core"
       css:theme-children="#words"
+      if-not="$ismanager"
+      />
+
+    <replace
+      css:content="#content"
+      css:theme-children="#content"
+      if="$ismanager"
       />
 
     <!-- FOOTER -->
