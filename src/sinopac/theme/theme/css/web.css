@@ -220,6 +220,22 @@ body {
 	margin-bottom:10%;
 	text-align:center;
 }
+#words-in table {
+	width:100%;
+	font-family:Arial, Helvetica, sans-serif;
+	padding:0;
+	margin:0;
+	text-align:left;
+}
+#words-in th {
+	padding:5px 5px 5px 5px;;
+	border-bottom:1px #999 solid;
+	border-top:1px #999 solid;
+}
+#words-in td {
+	padding:5px 5px 5px 5px;;
+	border-bottom:1px #CCC dashed;
+}
 #btn01{
 	width:67%;
 	clear:both;
