@@ -7,7 +7,9 @@
   <!-- Apply the following rules to standard Plone pages -->
   <rules css:if-content="#visual-portal-wrapper">
 
-    <theme href="index.html" />
+<!-- Theme file condition by path -->
+    <theme href="index.html" if="$get_id = 'home'" />
+    <theme href="in.html" if="$get_id = 'video'" />
 
     <!-- Replace title with Plone's page title  -->
     <replace
@@ -116,15 +118,8 @@
 
     <!-- CONTENT -->
     <replace
-      css:content="#content-core"
-      css:theme-children="#words"
-      if-not="$ismanager"
-      />
-
-    <replace
-      css:content="#content"
-      css:theme-children="#content"
-      if="$ismanager"
+      css:content-children="#content-core"
+      css:theme="#words"
       />
 
     <!-- FOOTER -->
